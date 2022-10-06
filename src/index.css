@@ -11,3 +11,79 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.select-busca-btn {
+  position: relative;
+  width: 100%;
+}
+.menu-button {
+  cursor: pointer;
+  width: 100%;
+  padding: 10px 18px 10px 18px;
+  height: 38px;
+  border-radius: 8px;
+  border: solid 1px #d5dfdb;
+  font: 12px "GothamMedium", sans-serif;
+  font-weight: 500;
+  color: #666;
+  transition: all .2s ease-in-out;
+  /* background: url("../assets/images/v.svg"), #fff; */
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 10px 6px;
+  text-align: left;
+  display: inline-block;
+  position: relative;
+  display: grid;
+  align-items: center;
+}
+
+.menu {
+  z-index: 99;
+  width: 100%;
+  max-height: 200px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.07);
+  border: solid 1px #d5dfdb;
+  border-radius: 6px;
+  background-color: #fff;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.1s linear;
+}
+
+.menu ul {
+  min-height: 40px;
+  margin-bottom: 0;
+}
+.menu ul {
+ display: block;
+}
+.menu button {
+  border: none;
+  background: none;
+  width: 100%;
+  font: 10px 'GothamMedium',sans-serif;
+  letter-spacing: -0.2px;
+  color: #3F544E;
+  align-items: center;
+  padding: 10px 17px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+  justify-content: center;
+  text-align: left;
+  
+}
+.menu button:hover {
+  background-color: #EAF4F1;
+}
+.menu.ativo {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+
+}
