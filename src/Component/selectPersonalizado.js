@@ -1,24 +1,22 @@
 import React,{useState} from 'react';
 
-export default function selectPersonalidado({option}){
+export default function selectPersonalidado({option, myChangeHandler, nameCampo, valorCampo, loadError}){
     // const recebeOptions = option;
 
 // console.log(option)
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [isActiveSelectLaborBond, setIsActiveSelectLaborBond] = useState(false);
     async function SelectLaborBond() { setIsActiveSelectLaborBond(!isActiveSelectLaborBond) }
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [loadLaborBond, ] = useState(false);
     return (
         <>
         <div className="select-busca-btn">
             <button 
-                className={loadLaborBond ? "menu-button inputErro" : "menu-button"}
+                className={loadError && loadError === true ? "menu-button inputErro" : "menu-button"}
                 onBlur={ () => (setIsActiveSelectLaborBond(false)) }
                 onClick={ SelectLaborBond }
             >
                 <span>
-                Selecione
+                {valorCampo && valorCampo !== undefined ? valorCampo.val : "Selecione"}
 
                 </span>
             
@@ -33,8 +31,8 @@ export default function selectPersonalidado({option}){
                                     <li key={index}>
                                         <button 
                                         value={optionIntem}
-                                        name="optionIntem"
-                                        // onClick={myChangeHandler}
+                                        name={nameCampo}
+                                        onClick={myChangeHandler}
                                         >{optionIntem}</button>
                                     </li>
                                 </>

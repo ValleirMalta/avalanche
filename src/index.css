@@ -87,3 +87,6 @@ code {
   opacity: 1;
 
 }
+.inputErro {
+    background-color: red !important;
+}
